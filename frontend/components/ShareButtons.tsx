@@ -6,7 +6,7 @@ export default function ShareButtons({ title, path }: { title: string; path: str
   const [copied, setCopied] = useState(false);
 
   const share = (network: 'x' | 'facebook') => {
-    const url = encodeURIComponent(`https://bestlivingpicks.com${path}`);
+    const url = encodeURIComponent(`https://www.bestlivingpicks.com${path}`);
     const text = encodeURIComponent(title);
     const href =
       network === 'x'
@@ -17,7 +17,7 @@ export default function ShareButtons({ title, path }: { title: string; path: str
 
   const copyLink = async () => {
     try {
-      await navigator.clipboard.writeText(`https://bestlivingpicks.com${path}`);
+      await navigator.clipboard.writeText(`https://www.bestlivingpicks.com${path}`);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {

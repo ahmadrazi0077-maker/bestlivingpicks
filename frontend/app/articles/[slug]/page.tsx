@@ -21,7 +21,7 @@ import JsonLd from '../../../components/JsonLd';
 // not at build time).
 export const dynamic = 'force-dynamic';
 
-const SITE = 'https://bestlivingpicks.com';
+const SITE = 'https://www.bestlivingpicks.com';
 
 interface Params {
   params: { slug: string };

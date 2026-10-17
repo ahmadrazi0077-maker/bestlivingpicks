@@ -7,7 +7,7 @@ import JsonLd from '../components/JsonLd';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 
-const SITE_URL = 'https://bestlivingpicks.com';
+const SITE_URL = 'https://www.bestlivingpicks.com';
 const SITE_NAME = 'BestLivingPicks';
 const TAGLINE = 'Honest mattress, pillow, and bedding reviews for US shoppers.';
 

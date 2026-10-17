@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { api } from '../lib/api';
 
-const SITE = 'https://bestlivingpicks.com';
+const SITE = 'https://www.bestlivingpicks.com';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = [
