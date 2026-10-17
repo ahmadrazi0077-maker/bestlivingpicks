@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+/* Article typography */
+.prose-blp h2 {
+  @apply mt-10 mb-4 text-2xl font-bold text-night-900;
+}
+.prose-blp h3 {
+  @apply mt-8 mb-3 text-xl font-semibold text-night-900;
+}
+.prose-blp p {
+  @apply mb-4 leading-relaxed;
+}
+.prose-blp ul {
+  @apply mb-4 list-disc pl-6 space-y-1;
+}
+.prose-blp ol {
+  @apply mb-4 list-decimal pl-6 space-y-1;
+}
+.prose-blp table {
+  @apply mb-6 w-full border-collapse text-sm;
+}
+.prose-blp th {
+  @apply border border-slate-200 bg-night-900 px-3 py-2 text-left text-white;
+}
+.prose-blp td {
+  @apply border border-slate-200 px-3 py-2;
+}
+.prose-blp blockquote {
+  @apply mb-4 border-l-4 border-amber-400 bg-amber-50 px-4 py-2 italic text-slate-700;
+}
+.prose-blp strong {
+  @apply font-semibold text-night-900;
+}
