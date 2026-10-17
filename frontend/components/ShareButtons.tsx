@@ -26,7 +26,7 @@ export default function ShareButtons({ title, path }: { title: string; path: str
   };
 
   const btn =
-    'inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition hover:border-ink hover:text-ink';
+    'inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition hover:border-slate-900 hover:text-slate-900';
 
   return (
     <div className="flex items-center gap-2">
@@ -49,7 +49,7 @@ export default function ShareButtons({ title, path }: { title: string; path: str
       <button
         type="button"
         onClick={copyLink}
-        className="inline-flex h-9 items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 text-sm font-medium text-slate-600 transition hover:border-ink hover:text-ink"
+        className="inline-flex h-9 items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 text-sm font-medium text-slate-600 transition hover:border-slate-900 hover:text-slate-900"
         aria-label="Copy link"
       >
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

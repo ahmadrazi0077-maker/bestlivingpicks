@@ -10,7 +10,7 @@ export default function TermsPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ label: 'Terms of Use' }]} />
-      <h1 className="text-3xl font-black text-ink">Terms of Use</h1>
+      <h1 className="text-3xl font-black text-slate-900">Terms of Use</h1>
       <div className="prose-blp mt-6">
         <h2>Content</h2>
         <p>All content on BestLivingPicks is for general informational purposes. Product prices, availability, trial periods, and warranties change over time — always verify current details with the retailer before purchasing.</p>

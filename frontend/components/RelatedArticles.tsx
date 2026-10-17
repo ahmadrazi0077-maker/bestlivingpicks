@@ -25,7 +25,7 @@ export default async function RelatedArticles({
 
   return (
     <section className="mt-14" aria-label="Related articles">
-      <h2 className="text-2xl font-bold text-ink">Keep reading</h2>
+      <h2 className="text-2xl font-bold text-slate-900">Keep reading</h2>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {related.map((a) => (
           <ArticleCard key={a.id} article={a} />

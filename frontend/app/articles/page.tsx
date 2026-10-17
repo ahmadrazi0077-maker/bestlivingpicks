@@ -18,7 +18,7 @@ export default async function ArticlesPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <Breadcrumbs items={[{ label: 'Articles' }]} />
-      <h1 className="text-3xl font-black text-ink">All articles</h1>
+      <h1 className="text-3xl font-black text-slate-900">All articles</h1>
       <p className="mt-2 max-w-2xl text-slate-600">
         Reviews, head-to-head comparisons, and buying guides — everything we publish about sleeping better.
       </p>
@@ -28,7 +28,7 @@ export default async function ArticlesPage() {
           <a
             key={c.id}
             href={`/categories/${c.slug}`}
-            className="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm font-medium text-slate-700 transition hover:border-sage hover:text-sage-dark"
+            className="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm font-medium text-slate-700 transition hover:border-indigo-600 hover:text-indigo-700"
           >
             {c.name}
           </a>

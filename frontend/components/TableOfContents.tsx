@@ -18,7 +18,7 @@ export default function TableOfContents({ headings }: { headings: TocHeading[] }
         className="flex w-full items-center justify-between text-left"
         aria-expanded={open}
       >
-        <span className="text-sm font-bold uppercase tracking-wide text-ink">
+        <span className="text-sm font-bold uppercase tracking-wide text-slate-900">
           In this guide
         </span>
         <span className="text-slate-400">{open ? '−' : '+'}</span>
@@ -29,7 +29,7 @@ export default function TableOfContents({ headings }: { headings: TocHeading[] }
             <li key={h.id}>
               <a
                 href={`#${h.id}`}
-                className="text-sm leading-snug text-sage-dark hover:text-sage-dark hover:underline"
+                className="text-sm leading-snug text-indigo-700 hover:text-indigo-700 hover:underline"
               >
                 {h.text}
               </a>

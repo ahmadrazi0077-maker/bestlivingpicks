@@ -34,9 +34,9 @@ const STEPS = [
 export default function HowWeReviewPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs font-bold uppercase tracking-[0.2em] text-sage-dark">Methodology</p>
-      <h1 className="mt-3 font-serif text-4xl font-bold text-ink">How We Review</h1>
-      <p className="mt-4 text-lg leading-relaxed text-muted">
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-700">Methodology</p>
+      <h1 className="mt-3 font-sans text-4xl font-bold text-slate-900">How We Review</h1>
+      <p className="mt-4 text-lg leading-relaxed text-slate-500">
         BestLivingPicks exists to help you buy once and buy right. Here&apos;s exactly how we
         research the products we recommend — and what we won&apos;t claim.
       </p>
@@ -44,27 +44,27 @@ export default function HowWeReviewPage() {
       <div className="mt-10 space-y-8">
         {STEPS.map((s, i) => (
           <div key={s.title} className="flex gap-5">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage font-serif text-lg font-bold text-white">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-600 font-sans text-lg font-bold text-white">
               {i + 1}
             </span>
             <div>
-              <h2 className="font-serif text-xl font-bold text-ink">{s.title}</h2>
-              <p className="mt-2 leading-relaxed text-muted">{s.text}</p>
+              <h2 className="font-sans text-xl font-bold text-slate-900">{s.title}</h2>
+              <p className="mt-2 leading-relaxed text-slate-500">{s.text}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-12 rounded-2xl bg-sand p-6 text-[15px] leading-relaxed text-ink/80">
-        <p className="font-serif text-lg font-bold text-ink">Independence</p>
+      <div className="mt-12 rounded-2xl bg-slate-100 p-6 text-[15px] leading-relaxed text-slate-900/80">
+        <p className="font-sans text-lg font-bold text-slate-900">Independence</p>
         <p className="mt-2">
           Brands cannot pay for placement or better rankings. We may earn a commission when you buy
           through our links — it never changes what we recommend or how we rank products. See our{' '}
-          <Link href="/affiliate-disclosure" className="font-semibold text-sage-dark hover:underline">
+          <Link href="/affiliate-disclosure" className="font-semibold text-indigo-700 hover:underline">
             affiliate disclosure
           </Link>{' '}
           and{' '}
-          <Link href="/editorial-policy" className="font-semibold text-sage-dark hover:underline">
+          <Link href="/editorial-policy" className="font-semibold text-indigo-700 hover:underline">
             editorial policy
           </Link>
           .

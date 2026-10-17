@@ -35,7 +35,7 @@ export default async function CategoryPage({ params }: Params) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <Breadcrumbs items={[{ label: 'Categories' }, { label: category.name }]} />
-      <h1 className="text-3xl font-black text-ink">{category.name}</h1>
+      <h1 className="text-3xl font-black text-slate-900">{category.name}</h1>
       {category.description && <p className="mt-2 max-w-2xl text-slate-600">{category.description}</p>}
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default function EditorialPolicyPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs font-bold uppercase tracking-[0.2em] text-sage-dark">Standards</p>
-      <h1 className="mt-3 font-serif text-4xl font-bold text-ink">Editorial Policy</h1>
-      <p className="mt-4 text-lg leading-relaxed text-muted">
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-700">Standards</p>
+      <h1 className="mt-3 font-sans text-4xl font-bold text-slate-900">Editorial Policy</h1>
+      <p className="mt-4 text-lg leading-relaxed text-slate-500">
         Trust is the whole business. These are the rules we hold ourselves to on every article.
       </p>
 
@@ -55,7 +55,7 @@ export default function EditorialPolicyPage() {
         </ul>
       </div>
 
-      <p className="mt-8 text-sm text-muted">
+      <p className="mt-8 text-sm text-slate-500">
         Questions about these standards? See <Link href="/how-we-review">how we review</Link> or{' '}
         <Link href="/contact">contact us</Link>.
       </p>

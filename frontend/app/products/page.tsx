@@ -19,7 +19,7 @@ export default async function ProductsPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <Breadcrumbs items={[{ label: 'Top Picks' }]} />
-      <h1 className="text-3xl font-black text-ink">Top picks</h1>
+      <h1 className="text-3xl font-black text-slate-900">Top picks</h1>
       <p className="mt-2 max-w-2xl text-slate-600">
         Every product we recommend, ranked by rating. Prices update on Amazon — check the latest deal before you buy.
       </p>
