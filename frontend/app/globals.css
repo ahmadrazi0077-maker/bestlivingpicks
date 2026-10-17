@@ -6,8 +6,18 @@
   color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+/* Anchor offset so fixed header doesn't cover linked headings */
+.prose-blp h2[id],
+.prose-blp h3[id] {
+  scroll-margin-top: 6rem;
 }
 
 /* Article typography */

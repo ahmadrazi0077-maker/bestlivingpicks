@@ -4,6 +4,7 @@ import { api } from '../lib/api';
 import ArticleCard from '../components/ArticleCard';
 import ProductCard from '../components/ProductCard';
 import NewsletterSignup from '../components/NewsletterSignup';
+import TrustBar from '../components/TrustBar';
 
 // Rendered on the server per request (API must be reachable at runtime,
 // not at build time).
@@ -60,6 +61,9 @@ export default async function HomePage() {
           )}
         </div>
       </section>
+
+      {/* Trust signals */}
+      <TrustBar />
 
       {/* Featured article */}
       {hero && (
@@ -121,8 +125,48 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* How we pick */}
+      <section className="bg-night-950 py-14 text-white" aria-label="How we pick products">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="text-2xl font-bold md:text-3xl">
+            How we pick <span className="text-amber-400">winners</span>
+          </h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                step: '01',
+                title: 'Research the specs',
+                text: 'We compare materials, construction, firmness options, trial periods, and warranties across every contender.',
+              },
+              {
+                step: '02',
+                title: 'Read real owners',
+                text: 'Thousands of verified buyer reviews get weighed for comfort, durability, cooling, and support — not just star counts.',
+              },
+              {
+                step: '03',
+                title: 'Rank by value',
+                text: 'The winner isn\u2019t the priciest — it\u2019s the pick we\u2019d buy with our own money for each sleeper type and budget.',
+              },
+            ].map((s) => (
+              <div key={s.step} className="rounded-2xl bg-white/5 p-6">
+                <p className="text-sm font-black tracking-widest text-amber-400">{s.step}</p>
+                <h3 className="mt-2 text-lg font-bold">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">{s.text}</p>
+              </div>
+            ))}
+          </div>
+          <Link
+            href="/about"
+            className="mt-8 inline-block text-sm font-semibold text-amber-400 hover:underline"
+          >
+            More about our process →
+          </Link>
+        </div>
+      </section>
+
       {/* Newsletter */}
-      <section className="mx-auto max-w-6xl px-4 pb-4">
+      <section className="mx-auto max-w-6xl px-4 py-12">
         <NewsletterSignup />
       </section>
     </div>
