@@ -145,7 +145,7 @@ export default async function ArticlePage({ params }: Params) {
 
       <AffiliateDisclosureNotice />
 
-      <h1 className="text-3xl font-black leading-tight text-night-900 md:text-4xl">
+      <h1 className="text-3xl font-black leading-tight text-ink md:text-4xl">
         {article.title}
       </h1>
 
@@ -163,7 +163,7 @@ export default async function ArticlePage({ params }: Params) {
         {category && (
           <a
             href={`/categories/${category.slug}`}
-            className="rounded-full bg-indigo-100 px-3 py-0.5 font-semibold text-indigo-800"
+            className="rounded-full bg-sage-light px-3 py-0.5 font-semibold text-sage-dark"
           >
             {category.name}
           </a>
@@ -201,7 +201,7 @@ export default async function ArticlePage({ params }: Params) {
 
       {article.products.length > 0 && (
         <section className="mt-12" aria-label="Products in this article">
-          <h2 className="text-2xl font-bold text-night-900">Products in this article</h2>
+          <h2 className="text-2xl font-bold text-ink">Products in this article</h2>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {article.products.map((p, i) => (
               <ProductCard key={p.id} product={p} rank={i + 1} />

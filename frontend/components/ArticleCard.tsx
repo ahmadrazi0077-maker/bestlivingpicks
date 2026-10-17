@@ -13,7 +13,7 @@ export default function ArticleCard({ article }: { article: ArticleSummary }) {
       href={`/articles/${article.slug}`}
       className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
     >
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-night-800">
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-ink">
         {article.cover_image_url ? (
           <Image
             src={article.cover_image_url}
@@ -23,18 +23,18 @@ export default function ArticleCard({ article }: { article: ArticleSummary }) {
             sizes="(max-width: 768px) 100vw, 33vw"
           />
         ) : (
-          <div className="flex h-full items-center justify-center bg-gradient-to-br from-night-800 to-night-950 p-6 text-center text-lg font-semibold text-white/80">
+          <div className="flex h-full items-center justify-center bg-gradient-to-br from-sage-dark to-ink p-6 text-center text-lg font-semibold text-white/80">
             {article.title}
           </div>
         )}
         {article.category && (
-          <span className="absolute left-3 top-3 rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-night-950">
+          <span className="absolute left-3 top-3 rounded-full bg-sage px-3 py-1 text-xs font-bold text-ink">
             {article.category.name}
           </span>
         )}
       </div>
       <div className="flex flex-1 flex-col p-5">
-        <h3 className="text-lg font-bold leading-snug text-night-900 transition group-hover:text-indigo-700">
+        <h3 className="text-lg font-bold leading-snug text-ink transition group-hover:text-sage-dark">
           {article.title}
         </h3>
         {article.excerpt && <p className="mt-2 line-clamp-2 text-sm text-slate-600">{article.excerpt}</p>}

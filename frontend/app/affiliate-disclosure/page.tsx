@@ -10,7 +10,7 @@ export default function AffiliateDisclosurePage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ label: 'Affiliate Disclosure' }]} />
-      <h1 className="text-3xl font-black text-night-900">Affiliate Disclosure</h1>
+      <h1 className="text-3xl font-black text-ink">Affiliate Disclosure</h1>
       <div className="prose-blp mt-6">
         <p>
           <strong>BestLivingPicks is a participant in the Amazon Services LLC Associates Program</strong>, an

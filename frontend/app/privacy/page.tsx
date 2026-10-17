@@ -10,7 +10,7 @@ export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
-      <h1 className="text-3xl font-black text-night-900">Privacy Policy</h1>
+      <h1 className="text-3xl font-black text-ink">Privacy Policy</h1>
       <div className="prose-blp mt-6">
         <p>BestLivingPicks ("we") respects your privacy. This policy explains what we collect and why.</p>
         <h2>Information we collect</h2>

@@ -1,8 +1,12 @@
 import type { Metadata } from 'next';
+import { Inter, Lora } from 'next/font/google';
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import JsonLd from '../components/JsonLd';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const lora = Lora({ subsets: ['latin'], variable: '--font-lora', display: 'swap' });
 
 const SITE_URL = 'https://bestlivingpicks.com';
 const SITE_NAME = 'BestLivingPicks';
@@ -77,11 +81,11 @@ const websiteSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${lora.variable}`}>
       <head>
         <JsonLd data={[organizationSchema, websiteSchema]} />
       </head>
-      <body>
+      <body className="font-sans">
         <Header />
         <main className="min-h-[60vh]">{children}</main>
         <Footer />

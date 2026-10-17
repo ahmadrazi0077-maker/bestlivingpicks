@@ -4,14 +4,14 @@ import NewsletterSignup from '../../components/NewsletterSignup';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Who we are and how BestLivingPicks tests and rates sleep products.',
+  description: 'Who we are and how BestLivingPicks researches and compares sleep products.',
 };
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ label: 'About Us' }]} />
-      <h1 className="text-3xl font-black text-night-900">About BestLivingPicks</h1>
+      <h1 className="text-3xl font-black text-ink">About BestLivingPicks</h1>
       <div className="prose-blp mt-6">
         <p>
           BestLivingPicks started with a simple frustration: mattress shopping felt like navigating a maze of

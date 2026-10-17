@@ -11,7 +11,12 @@ html {
 }
 
 body {
-  @apply bg-slate-50 text-slate-800 antialiased;
+  @apply bg-cream font-sans text-ink antialiased;
+}
+
+/* Editorial headings default to the serif face */
+h1, h2, h3 {
+  @apply font-serif;
 }
 
 /* Anchor offset so fixed header doesn't cover linked headings */
@@ -22,10 +27,10 @@ body {
 
 /* Article typography */
 .prose-blp h2 {
-  @apply mt-10 mb-4 text-2xl font-bold text-night-900;
+  @apply mt-10 mb-4 text-2xl font-bold text-ink;
 }
 .prose-blp h3 {
-  @apply mt-8 mb-3 text-xl font-semibold text-night-900;
+  @apply mt-8 mb-3 text-xl font-semibold text-ink;
 }
 .prose-blp p {
   @apply mb-4 leading-relaxed;
@@ -40,14 +45,14 @@ body {
   @apply mb-6 w-full border-collapse text-sm;
 }
 .prose-blp th {
-  @apply border border-slate-200 bg-night-900 px-3 py-2 text-left text-white;
+  @apply border border-slate-200 bg-ink px-3 py-2 text-left text-white;
 }
 .prose-blp td {
   @apply border border-slate-200 px-3 py-2;
 }
 .prose-blp blockquote {
-  @apply mb-4 border-l-4 border-amber-400 bg-amber-50 px-4 py-2 italic text-slate-700;
+  @apply mb-4 border-l-4 border-sage bg-sand px-4 py-2 italic text-slate-700;
 }
 .prose-blp strong {
-  @apply font-semibold text-night-900;
+  @apply font-semibold text-ink;
 }
