@@ -83,6 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={inter.variable}>
       <head>
         <JsonLd data={[organizationSchema, websiteSchema]} />
+        <meta name="google-site-verification" content="mpE0YkkZTQ0mRXtUGHAdHGCgoBCAwJDKZmAKvEsM8ms" />
       </head>
       <body className="font-sans">
         <Header />
