@@ -38,6 +38,7 @@ export interface Product {
 }
 
 export interface Article extends ArticleSummary {
+  updated_at: string | null;
   content_md: string;
   seo_title: string | null;
   seo_description: string | null;

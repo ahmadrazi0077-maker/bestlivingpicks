@@ -16,6 +16,7 @@ import ShareButtons from '../../../components/ShareButtons';
 import AuthorBox from '../../../components/AuthorBox';
 import RelatedArticles from '../../../components/RelatedArticles';
 import JsonLd from '../../../components/JsonLd';
+import { extractFaqs, buildFaqPageSchema } from '../../../lib/schema';
 
 // Rendered on the server per request (API must be reachable at runtime,
 // not at build time).
@@ -111,7 +112,7 @@ export default async function ArticlePage({ params }: Params) {
     },
   ];
 
-  const schemas = [
+  const schemas: Record<string, unknown>[] = [
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -119,6 +120,7 @@ export default async function ArticlePage({ params }: Params) {
       description: article.seo_description || article.excerpt || undefined,
       image: article.cover_image_url ? [article.cover_image_url] : undefined,
       datePublished: article.published_at || undefined,
+      dateModified: article.updated_at || undefined,
       author: { '@type': 'Organization', name: 'BestLivingPicks', url: SITE },
       publisher: { '@type': 'Organization', name: 'BestLivingPicks', url: SITE },
       mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
@@ -130,6 +132,12 @@ export default async function ArticlePage({ params }: Params) {
       itemListElement: breadcrumbItems,
     },
   ];
+
+  // FAQPage schema, auto-extracted from the article's visible FAQ section.
+  const faqs = extractFaqs(article.content_md);
+  if (faqs.length > 0) {
+    schemas.push(buildFaqPageSchema(faqs));
+  }
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10">

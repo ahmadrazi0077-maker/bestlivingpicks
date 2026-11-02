@@ -3,6 +3,8 @@ import { api } from '../../lib/api';
 import ProductCard from '../../components/ProductCard';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import AffiliateDisclosureNotice from '../../components/AffiliateDisclosureNotice';
+import JsonLd from '../../components/JsonLd';
+import { buildProductListSchema } from '../../lib/schema';
 
 // Rendered on the server per request (API must be reachable at runtime,
 // not at build time).
@@ -16,8 +18,22 @@ export const metadata: Metadata = {
 export default async function ProductsPage() {
   const { products } = await api.products({ limit: 50 });
 
+  const SITE = 'https://www.bestlivingpicks.com';
+  const schemas: Record<string, unknown>[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+        { '@type': 'ListItem', position: 2, name: 'Top Picks', item: `${SITE}/products` },
+      ],
+    },
+    buildProductListSchema(products),
+  ];
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
+      <JsonLd data={schemas} />
       <Breadcrumbs items={[{ label: 'Top Picks' }]} />
       <h1 className="text-3xl font-black text-slate-900">Top picks</h1>
       <p className="mt-2 max-w-2xl text-slate-600">
