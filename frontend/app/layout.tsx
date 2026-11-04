@@ -84,7 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <meta name="google-site-verification" content="mpE0YkkZTQ0mRXtUGHAdHGCgoBCAwJDKZmAKvEsM8ms" />
-        <meta name="google-adsense-account" content="ca-pub-1400964309809475">
+        <meta name="google-adsense-account" content="ca-pub-1400964309809475"/>
       </head>
       <body className="font-sans">
         <Header />
